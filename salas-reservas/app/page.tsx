@@ -36,14 +36,13 @@ export default function HomePage() {
       setLoading(false)
     }
     load()
-  }, [])
-  return (
+  }, [])return (
     <div style={{ minHeight: '100vh', background: '#f0efeb', display: 'flex', flexDirection: 'column' }}>
       <Header active="home" />
       <main style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px', flex: 1, width: '100%' }}>
         <div style={{ marginBottom: 24 }}>
           <h1 style={{ fontSize: 22, fontWeight: 600, marginBottom: 4, color: '#111' }}>Disponibilidad esta semana</h1>
-          <p style={{ fontSize: 13, color: '#666', margin: 0 }}>Vista general sin datos personales. Para reservar usa el botón de cada sala.</p>
+          <p style={{ fontSize: 13, color: '#666', margin: 0 }}>Vista general sin datos personales.</p>
         </div>
         {loading ? (
           <div style={{ textAlign: 'center', padding: 48, color: '#999', fontSize: 14 }}>Cargando salas...</div>
