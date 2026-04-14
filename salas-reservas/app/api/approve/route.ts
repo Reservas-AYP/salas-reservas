@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabaseAdmin } from '@/lib/supabase'
+import { getSupabaseAdmin } from '@/lib/supabase'
 import { sendConfirmationEmail } from '@/lib/emails'
 
 export async function POST(req: NextRequest) {
   try {
     const { id } = await req.json()
-    const { data, error } = await supabaseAdmin
+    const admin = getSupabaseAdmin()
+    const { data, error } = await admin
       .from('reservations')
       .update({ status: 'approved' })
       .eq('id', id)
