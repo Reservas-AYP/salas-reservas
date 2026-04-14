@@ -12,3 +12,4 @@ Copia .env.example a .env.local y rellena los valores.
 - `/reservar` — formulario de reserva
 - `/admin` — panel de administración (password protegido)
 - `/cancelar/[token]` — cancelar reserva via link de correo
+- 
