@@ -36,7 +36,8 @@ export default function HomePage() {
       setLoading(false)
     }
     load()
-  }, [])return (
+  }, [])
+  return (
     <div style={{ minHeight: '100vh', background: '#f0efeb', display: 'flex', flexDirection: 'column' }}>
       <Header active="home" />
       <main style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px', flex: 1, width: '100%' }}>
