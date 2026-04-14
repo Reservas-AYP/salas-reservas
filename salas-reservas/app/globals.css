@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --bg-secondary: #f7f7f5;
+  --bg-tertiary: #f0efeb;
+  --text: #111111;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --border: rgba(0,0,0,0.1);
+  --border-strong: rgba(0,0,0,0.2);
+  --green-bg: #EAF3DE;
+  --green-text: #3B6D11;
+  --green-border: #9FE1CB;
+  --amber-bg: #FAEEDA;
+  --amber-text: #854F0B;
+  --red-bg: #FCEBEB;
+  --red-text: #A32D2D;
+  --red-border: #F7C1C1;
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+* { box-sizing: border-box; }
+body { font-family: -apple-system, 'Helvetica Neue', sans-serif; background: var(--bg-tertiary); color: var(--text); margin: 0; }
+input, select, textarea, button { font-family: inherit; }
