@@ -4,7 +4,8 @@ export default function Header({ active }: { active: 'home' | 'reservar' | 'admi
   return (
     <header style={{ background: '#111', borderBottom: '3px solid #F5C800', padding: '0 24px' }}>
       <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', alignItems: 'center', height: 60, gap: 24 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+        {/* AYP Logo */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, textDecoration: 'none' }}>
           <div style={{
             width: 38, height: 38, borderRadius: '50%',
             background: '#F5C800',
