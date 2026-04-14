@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { supabase, supabaseAdmin } from '@/lib/supabase'
+import { supabase, getSupabaseAdmin } from '@/lib/supabase'
 import type { Room, Reservation, ConfigOption } from '@/lib/supabase'
 import Link from 'next/link'
 
