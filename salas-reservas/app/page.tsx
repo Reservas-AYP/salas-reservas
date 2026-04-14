@@ -22,11 +22,9 @@ export default function HomePage() {
   const [rooms, setRooms] = useState<Room[]>([])
   const [reservations, setReservations] = useState<Reservation[]>([])
   const [loading, setLoading] = useState(true)
-
   const weekStart = startOfWeek(new Date(), { weekStartsOn: 1 })
   const days = Array.from({ length: 7 }, (_, i) => addDays(weekStart, i))
   const dayLabels = ['L','M','X','J','V','S','D']
-
   useEffect(() => {
     async function load() {
       const [{ data: roomsData }, { data: resData }] = await Promise.all([
@@ -39,14 +37,13 @@ export default function HomePage() {
     }
     load()
   }, [])
-
   return (
     <div style={{ minHeight: '100vh', background: '#f0efeb', display: 'flex', flexDirection: 'column' }}>
       <Header active="home" />
       <main style={{ maxWidth: 900, margin: '0 auto', padding: '32px 24px', flex: 1, width: '100%' }}>
         <div style={{ marginBottom: 24 }}>
           <h1 style={{ fontSize: 22, fontWeight: 600, marginBottom: 4, color: '#111' }}>Disponibilidad esta semana</h1>
-          <p style={{ fontSize: 13, color: '#666', margin: 0 }}>Vista general — sin datos personales. Para reservar usa el botón de cada sala.</p>
+          <p style={{ fontSize: 13, color: '#666', margin: 0 }}>Vista general sin datos personales. Para reservar usa el botón de cada sala.</p>
         </div>
         {loading ? (
           <div style={{ textAlign: 'center', padding: 48, color: '#999', fontSize: 14 }}>Cargando salas...</div>
@@ -62,11 +59,7 @@ export default function HomePage() {
                   {days.map((day, i) => {
                     const status = getDayStatus(reservations, day, room.id)
                     const isToday = isSameDay(day, new Date())
-                    const colors = {
-                      free: { bg: '#EAF3DE', c: '#3B6D11' },
-                      partial: { bg: '#FAEEDA', c: '#854F0B' },
-                      full: { bg: '#FCEBEB', c: '#A32D2D' },
-                    }
+                    const colors = { free: { bg: '#EAF3DE', c: '#3B6D11' }, partial: { bg: '#FAEEDA', c: '#854F0B' }, full: { bg: '#FCEBEB', c: '#A32D2D' } }
                     return (
                       <div key={i} style={{ aspectRatio: '1', borderRadius: 4, background: colors[status].bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 9, color: colors[status].c, fontWeight: isToday ? 700 : 400, outline: isToday ? '2px solid #111' : 'none', outlineOffset: 1 }}>
                         {format(day, 'd')}
@@ -85,6 +78,13 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        )}
+      </main>
+      <Footer />
+    </div>
+  )
+}
+)}
         )}
       </main>
       <Footer />
