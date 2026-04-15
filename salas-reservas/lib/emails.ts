@@ -3,7 +3,7 @@ import { Resend } from 'resend'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
-const FROM_EMAIL = 'reservas@tuempresa.com'
+const FROM_EMAIL = 'onboarding@resend.dev'
 
 function generateICS(reservation: {
   reason: string
