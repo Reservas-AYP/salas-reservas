@@ -162,7 +162,7 @@ export default function AdminPage() {
       <header style={{ background: '#111', borderBottom: '3px solid #F5C800', padding: '0 24px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', alignItems: 'center', height: 60, gap: 16 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <div style={{ width: 32, height: 32, borderRadius: '50%', background: '#F5C800', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 11, color: '#111' }}>a&p</div>
+            <img src="/logo-ayp.png" alt="AYP" style={{ width: 32, height: 32, borderRadius: '50%', objectFit: 'cover' }} />
             <span style={{ color: '#fff', fontWeight: 600, fontSize: 14 }}>AYP Admin</span>
             {roleBadge(user.role)}
           </div>
