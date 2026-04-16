@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { LOGO_AYP } from '@/lib/logo'
 
 export default function Header({ active }: { active: 'home' | 'reservar' | 'admin' }) {
   return (
     <header style={{ background: '#111', borderBottom: '3px solid #F5C800', padding: '0 24px' }}>
       <div style={{ maxWidth: 900, margin: '0 auto', display: 'flex', alignItems: 'center', height: 60, gap: 24 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-          <Image src="/logo-ayp.png" alt="AYP" width={38} height={38} style={{ borderRadius: '50%', objectFit: 'cover' }} />
+          <img src={LOGO_AYP} alt="AYP" style={{ width: 38, height: 38, borderRadius: '50%', objectFit: 'cover' }} />
           <div>
             <div style={{ fontSize: 15, fontWeight: 700, color: '#fff', letterSpacing: '-0.3px', lineHeight: 1 }}>AYP</div>
             <div style={{ fontSize: 10, color: '#F5C800', fontWeight: 500, letterSpacing: '0.5px' }}>RESERVA DE SALAS</div>
