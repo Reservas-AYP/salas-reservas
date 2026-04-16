@@ -129,7 +129,7 @@ export default function AdminPage() {
     <div style={{ minHeight: '100vh', background: '#f0efeb', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
       <div style={{ background: '#fff', borderRadius: 12, border: '0.5px solid rgba(0,0,0,0.1)', padding: '2.5rem', maxWidth: 380, width: '100%' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
-          <div style={{ width: 36, height: 36, borderRadius: '50%', background: '#F5C800', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: 12, color: '#111' }}>a&p</div>
+          <img src="/logo-ayp.png" alt="AYP" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover' }} />
           <div>
             <div style={{ fontSize: 15, fontWeight: 700 }}>AYP — Admin</div>
             <div style={{ fontSize: 11, color: '#666' }}>Panel de administración</div>
