@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import type { Reservation } from '@/lib/supabase'
-import Link from 'next/link'
+import Link from 'next/link' import { LOGO_AYP } from '@/lib/logo'
 
 type AdminUser = { id: string; email: string; name: string; role: 'master' | 'approver'; is_active?: boolean }
 type Room = { id: string; name: string; capacity: number; is_active: boolean }
@@ -129,7 +129,7 @@ export default function AdminPage() {
     <div style={{ minHeight: '100vh', background: '#f0efeb', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24 }}>
       <div style={{ background: '#fff', borderRadius: 12, border: '0.5px solid rgba(0,0,0,0.1)', padding: '2.5rem', maxWidth: 380, width: '100%' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 24 }}>
-          <img src="/logo-ayp.png" alt="AYP" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover' }} />
+          <img src={LOGO_AYP} alt="AYP" style={{ width: 36, height: 36, borderRadius: '50%', objectFit: 'cover' }} />
           <div>
             <div style={{ fontSize: 15, fontWeight: 700 }}>AYP — Admin</div>
             <div style={{ fontSize: 11, color: '#666' }}>Panel de administración</div>
