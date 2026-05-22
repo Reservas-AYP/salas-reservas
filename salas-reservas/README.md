@@ -13,3 +13,4 @@ Copia .env.example a .env.local y rellena los valores.
 - `/admin` — panel de administración (password protegido)
 - `/cancelar/[token]` — cancelar reserva via link de correo
 - 
+<!-- actualización -->
