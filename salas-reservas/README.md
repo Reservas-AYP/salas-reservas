@@ -14,3 +14,4 @@ Copia .env.example a .env.local y rellena los valores.
 - `/cancelar/[token]` — cancelar reserva via link de correo
 - 
 <!-- actualización -->
+<!-- v2 -->
